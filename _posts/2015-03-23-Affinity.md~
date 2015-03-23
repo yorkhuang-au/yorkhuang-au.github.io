@@ -115,8 +115,8 @@ an order. At the end, R function aggregate() is called combine to the results.
 Some results:
 
 ```
-> source('C:/Users/yhuang/git/blog/affinity/workspace/AffinityR/affinity.R')
-> affinityR("C:/Users/yhuang/git/blog/affinity/workspace/data/sales.csv", 2)
+> source('C:/Users/yhuang/git/blog/affinity/AffinityR/affinity.R')
+> affinityR("C:/Users/yhuang/git/blog/affinity/data/sales.csv", 2)
   product1 product2 quantity
 4   orange    peach       86
 1    grape   orange       79
@@ -124,7 +124,7 @@ Some results:
 2    apple   orange       33
 5    apple    peach       27
 6    apple    grape       15
-> affinityR("C:/Users/yhuang/git/blog/affinity/workspace/data/sales.csv", 3)
+> affinityR("C:/Users/yhuang/git/blog/affinity/data/sales.csv", 3)
   product1 product2 product3 quantity
 1    grape   orange    peach      388
 4    apple    grape   orange      165
@@ -153,11 +153,11 @@ import cascading.pipe.Pipe
 class AffinityHadoop(args : Args) extends Job(args) {
   val logSchema = List('orderid, 'product, 'quanity)
   
-  val input = Csv("/home/yhuang/blog/affinity/workspace/data/sales.csv",
+  val input = Csv("/home/yhuang/blog/affinity/data/sales.csv",
     ",", logSchema).read
   val n = args("n").toInt
   val output = affinityHadoop(input, n)
-  output.write( Csv("/home/yhuang/blog/affinity/workspace/data/affinity_hadoop.csv"))
+  output.write( Csv("/home/yhuang/blog/affinity/data/affinity_hadoop.csv"))
   
   def affinityHadoop(pipe:Pipe, n:Int) = {
     pipe

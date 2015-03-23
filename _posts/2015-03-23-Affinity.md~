@@ -18,22 +18,6 @@ Let's look at the problem below.
 The sales data are recorded in a csv file. There are three fields, orderid, product and quantity. We will find out the quantity that every groups of product are purchased together (same order).
 A small sample data are listed.
 
-```CSV
-sales.csv
-
-orderid, product, quantity -- Header not included
-
-2,orange,5
-2,grape,5
-1,orange,6
-1,peach,7
-2,apple,3
-2,peach,4
-3,apple,3
-3,peach,5
-2,orange,6
-1,grape,4
-```
 
 ## References:
 [1] Wikipedia http://en.wikipedia.org/wiki/Affinity_analysis

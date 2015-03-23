@@ -16,7 +16,7 @@ Let's look at the problem below.
 The sales data are recorded in a csv file. There are three fields, orderid, product and quantity. We will find out the quantity that every groups of product are purchased together (same order).
 A small sample data are listed.
 
-```
+```sql
 sales.csv
 
 orderid, product, quantity -- Header not included

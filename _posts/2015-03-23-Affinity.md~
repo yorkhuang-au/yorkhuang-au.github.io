@@ -1,10 +1,8 @@
 ---
 layout: post
-title: Implement Basket Affinity Analysis in R/Scalding/Spark
+title: Implementations of Affinity in R, Hadoop Mapreduce and Spark
 comments: true
 ---
-
-#Implementations of Affinity in R, Hadoop Mapreduce and Spark
 
 Affinity analysis is a techinque that discovers co-occurence relationships among activities performed by specific individuals or groups. In retail it is used to perform basket analysis.
 Basket analysis may tell a retailer that customers often purchases shampooo and conditioner together. [1]
@@ -18,6 +16,22 @@ Let's look at the problem below.
 The sales data are recorded in a csv file. There are three fields, orderid, product and quantity. We will find out the quantity that every groups of product are purchased together (same order).
 A small sample data are listed.
 
+```
+sales.csv
+
+orderid, product, quantity -- Header not included
+
+2,orange,5
+2,grape,5
+1,orange,6
+1,peach,7
+2,apple,3
+2,peach,4
+3,apple,3
+3,peach,5
+2,orange,6
+1,grape,4
+```
 
 ## References:
 [1] Wikipedia http://en.wikipedia.org/wiki/Affinity_analysis

@@ -1,0 +1,66 @@
+---
+layout: post
+title: Implement Basket Affinity Analysis in R/Scalding/Spark
+comments: true
+---
+
+{% highlight scala %}
+```
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.spark.rdd._
+
+object AffinitySpark {
+    def main(args: Array[String]) {
+      
+      val inputFile = args(0)
+      val n = args(1).trim().toInt
+      
+      val conf = new SparkConf().setAppName("Affinity").setMaster("local")
+      val sc = new SparkContext(conf)
+            
+      val input = sc.textFile(inputFile)
+
+      val output = affinitySpark(input, n)
+      
+      output.foreach(println)
+    }
+    
+    def affinitySpark(d1 : RDD[String], n:Int) = {
+      // Split csv into fields, key is order id no & product id
+      val d2 = d1.map( line => {
+        val t = line.split(",")
+        ((t(0).trim.toInt, t(1).trim), t(2).trim.toInt)
+      })
+      
+      // Combine same product in same order
+      val d3 = d2.reduceByKey( (a,b) => a+b)
+      
+      // Convert to key to order id
+      val d4 = d3.map( x => (x._1._1, (x._1._2, x._2)))
+      
+      // Create all combinations in every orders
+      val d5 = d4.groupByKey()
+      val d6 = d5.map( x => x._2.toList.combinations(n) )
+      
+      // In every order, create the product set as key and quantity
+      val d7 = d6.flatMap(y => y.map( c => {
+        c.sortBy(_._1)
+              .foldLeft(("",1))( (prev: (String,Int), cur :(String, Int)) => 
+              (prev._1 + "|" + cur._1, prev._2*cur._2 ) )
+      } ))
+
+      // Sum up by every product sets
+      val d8 = d7.reduceByKey((a,b) => a+b).collect().sortBy(_._2).reverse
+      d8
+    }
+}
+```
+{% endhighlight %}
+
+## References
+
+If you would like to learn more about pointlike:
+
+
+{% include twitter_plug.html %}

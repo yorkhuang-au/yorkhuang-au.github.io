@@ -4,7 +4,7 @@ title: Implement Basket Affinity Analysis in R/Scalding/Spark
 comments: true
 ---
 
-{% highlight scala %}
+
 ```
 import org.apache.spark._
 import org.apache.spark.SparkContext._
@@ -56,7 +56,7 @@ object AffinitySpark {
     }
 }
 ```
-{% endhighlight %}
+
 
 ## References
 

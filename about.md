@@ -24,3 +24,18 @@ Johns Hopkins University
 * [Mining Massive Datasets]( https://www.coursera.org/course/mmds)
 
 Stanford University
+
+* Cloudera Certified Developer for Apache Hadoop (CCDH)
+
+* Cloudera Certified Administrator for Apache Hadoop CDH4
+
+* MCITP: Business Intelligence Developer 2008
+
+* MCTS: SQL Server 2008 Business Intelligence Development and Maintenance
+
+* Sun Certified Java2 Programmer
+
+*
+
+*
+

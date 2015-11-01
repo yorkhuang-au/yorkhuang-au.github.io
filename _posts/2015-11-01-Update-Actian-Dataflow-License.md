@@ -1,3 +1,8 @@
+---
+layout: post
+title: Update Actian Dataflow License
+---
+
 ## Update Actian Dataflow License
 
 There are two steps. The first is to update license on the server. Then update license on the client side.

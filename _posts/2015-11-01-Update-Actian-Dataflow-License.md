@@ -23,7 +23,7 @@ $ chmod 644 <new pcDxxx.slc license>
 2. On the first node (control node), stop and start dataflow
 
 ```
-$ su - actian
+Under root user - 
 $ cd /etc/init.d/
 $ ./dataflow stop
 $ ./dataflow status

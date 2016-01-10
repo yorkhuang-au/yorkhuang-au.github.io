@@ -2,7 +2,6 @@
 layout: post
 title: Install CKAN on Centos 7
 ---
-
 # Install CKAN on Centos 7
 
 ## Background

@@ -34,7 +34,7 @@ In /etc/sudoers add the ckan user for sudo.
 In /etc/yum.conf, add the following to enable proxy for yum.
 
 ```
-	proxy=http://proxy_server:port_number
-	proxy_username=username
-	proxy_password=password
+    proxy=http://proxy_server:port_number
+    proxy_username=username
+    proxy_password=password
 ```

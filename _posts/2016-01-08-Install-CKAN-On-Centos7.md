@@ -39,13 +39,12 @@ In /etc/yum.conf, add the following to enable proxy for yum.
     proxy_password=password
 ```
 
-
 ## Install the required packages
 
 CKAN document says that if you are using a Debian-based operating system (such as Ubuntu) install the required packages with this command:
+
 ```
-	sudo apt-get install python-dev postgresql libpq-dev python-pip python-virtualenv git-core solr-jetty 
+    sudo apt-get install python-dev postgresql libpq-dev python-pip python-virtualenv git-core solr-jetty 
 ```
 
 In my case, I need to install the packages by myself on Centos 7.
-

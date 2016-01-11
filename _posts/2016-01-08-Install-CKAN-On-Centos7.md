@@ -25,12 +25,14 @@ The OS is Centos 7 on a vmware virtual machine.
 I use the image CentOS-7-x86_64-Everything-1503-01.iso to install Centos 7.
 Set up network proxy and date/time properly.
 
-In /etc/sudoers add the ckan user for sudo.  
+In /etc/sudoers add the ckan user for sudo. 
+ 
 ```
 	ckan-user   ALL(=ALL)   ALL
 ```
 
 In /etc/yum.conf, add the following to enable proxy for yum.
+
 ```
 	proxy=http://proxy_server:port_number
 	proxy_username=username

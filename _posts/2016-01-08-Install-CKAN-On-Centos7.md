@@ -46,16 +46,8 @@ CKAN document says that if you are using a Debian-based operating system (such a
 
 In my case, I need to install the packages by myself on Centos 7.
 
-| Header1 | Header2 | Header3 |
-|:--------|:-------:|--------:|
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-|----
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-
 | Package     | Description                                        |
-|:------------|:---------------------------------------------------|
+|:------------|:--------------------------------------------------:|
 | Python      | The Python programming language, v2.6 or 2.7       |
 | PostgreSQL  | The PostgreSQL database system, v8.4 or newer      |
 | libpq       | The C programmer’s interface to PostgreSQL         |

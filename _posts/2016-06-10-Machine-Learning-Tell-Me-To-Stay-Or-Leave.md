@@ -47,7 +47,7 @@ dim(data)
 ## [1] 26 10
 ```
 
-There 10 fields which are straightforward. There 26 records and myself.
+There were 10 fields which were straightforward. There were 26 records and myself.
 
 I then created the training and testing datasets. I didn't set a seed to reproduce the same results as I thought God may affects my life instead of determining. :)
 

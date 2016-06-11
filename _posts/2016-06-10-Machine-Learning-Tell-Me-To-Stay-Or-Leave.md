@@ -1,6 +1,5 @@
 # Machine Learning Tell Me To Stay Or Leave
-York Huang  
-Saturday, June 11, 2016  
+layout: post
 
 ### Background
 I had ever been in a situation that quite a few of people were leaving the company. I was asked by people and myself that whether I would stay or leave? Well, I thought it is good to have sort of humor in my life. A job should be interesting even when I was facing some difficulties.

@@ -9,7 +9,7 @@ Hi, I am York Huang.
 
 ## Certifications
 
-### [Data Science]
+### Data Science
 
 Jeff Leek, PhD, Roger D. Peng, PhD & Brian Caffo, PhD
 

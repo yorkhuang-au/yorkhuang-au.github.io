@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Machine Learning Tell Me To Stay Or Leave
+title: Machine Learning Tells Me To Stay Or Leave
 ---
 
 ### Background

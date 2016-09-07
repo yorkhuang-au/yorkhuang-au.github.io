@@ -47,10 +47,10 @@ CKAN document says that if you are using a Debian-based operating system (such a
 In my case, I need to install the packages by myself on Centos 7.
 
 | Package     | Description                                        |
-|-------------|:--------------------------------------------------:|
+|:------------|:--------------------------------------------------:|
 | Python      | The Python programming language, v2.6 or 2.7       |
 | PostgreSQL  | The PostgreSQL database system, v8.4 or newer      |
-| libpq       | The C programmer’s interface to PostgreSQL         |
+| libpq       | The C programmerâ€™s interface to PostgreSQL         |
 | pip         | A tool for installing and managing Python packages |
 | virtualenv  | The virtual Python environment builder             |
 | Git         | A distributed version control system               |

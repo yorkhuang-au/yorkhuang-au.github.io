@@ -67,4 +67,4 @@ df = sqlContext.sqlContext.read.format("com.databricks.spark.avro").load("/user/
 a = df.collect()
 a[1]
 ```
-
+  

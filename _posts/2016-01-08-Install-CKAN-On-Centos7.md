@@ -306,4 +306,3 @@ ckan.site_url = http://demo.ckan.org
 ```
 
 Do not add a trailing slash to the URL.
-

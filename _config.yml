@@ -37,3 +37,4 @@ pages_list:
 gems:
   - jekyll-redirect-from
 encoding: UTF-8
+highlighter: rouge

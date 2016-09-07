@@ -1,7 +1,7 @@
 # Dependencies
-markdown:         redcarpet
-redcarpet:
-  extensions: ["tables"]
+#markdown:         redcarpet
+#redcarpet:
+#  extensions: ["tables"]
 
 pygments:         true
 
@@ -36,3 +36,5 @@ pages_list:
 #  * https://help.github.com/articles/redirects-on-github-pages
 gems:
   - jekyll-redirect-from
+encoding: UTF-8
+highlighter: rouge

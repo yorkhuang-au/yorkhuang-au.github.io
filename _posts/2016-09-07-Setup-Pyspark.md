@@ -26,17 +26,21 @@ I use Anaconda2 python 2.7 for pyspark.
   Download the Python2.7 64 bit installer Anaconda2-4.1.1-Linux-x86_64.sh.
 * Copy it to sanbox.
 * Run the following commands.
+
 ```
 [root@maprdemo ~]# bash Anaconda2-4.1.1-Linux-x86_64.sh
 ```
+
 Use /opt/anaconda2 for the folder.
 
 Set up update-alternatives for python.
+
 ```
 rm /usr/bin/python
 update-alternatives --install /usr/bin/python python /opt/anaconda2/bin/python 1
 update-alternatives --install /usr/bin/python python /usr/bin/python2.6 1
 ```
+
 Double check that anaconda2 python is active.
 
 * Run pyspark to check that it is using anaconda python2.7 now.
@@ -49,25 +53,38 @@ Copy to sandbox. /opt/spark-jars/
 
 vi /opt/mapr/spark/spark-1.5.2/conf/spark-defaults.conf
 and add the following two lines at the end.
+
 ```
 spark.driver.extraClassPath /opt/spark-jars/spark-avro_2.10-2.0.1.jar
 spark.executor.extraClassPath /opt/spark-jars/spark-avro_2.10-2.0.1.jar
 ``` 
+
 Otherwise, I have to run pyspark as
+
 ```
 /opt/mapr/spark/spark-1.5.2/bin/pyspark --marter yarn-client --jars /opt/spark-jars/spark-avro_2.10-2.0.1.jar
 ```
+
 See the link http://stackoverflow.com/questions/29099115/spark-submit-add-multiple-jars-in-classpath
 
 Test reading avro.
 Prepare t.avro.
+<<<<<<< HEAD
 In pyspark, do the following. See the link https://www.cloudera.com/documentation/enterprise/5-6-x/topics/spark_avro.html#concept_hsz_nvn_45__section_pgn_r45_st.
+=======
+In pyspark, do the following. See thelink https://www.cloudera.com/documentation/enterprise/5-6-x/topics/spark_avro.html#concept_hsz_nvn_45__section_pgn_r45_st.
+
+>>>>>>> 92fd6c51bc828b6f350de5e430f794cee490d430
 ```
 df = sqlContext.sqlContext.read.format("com.databricks.spark.avro").load("/user/mapr/avro-test/t.avro")
 a = df.collect()
 a[1]
 ```
+<<<<<<< HEAD
 
 ### Another reference:
 https://github.com/databricks/spark-avro
 
+=======
+  
+>>>>>>> 92fd6c51bc828b6f350de5e430f794cee490d430

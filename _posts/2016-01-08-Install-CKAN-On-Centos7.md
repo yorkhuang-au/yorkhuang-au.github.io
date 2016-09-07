@@ -290,7 +290,7 @@ sqlalchemy.url This should refer to the database we created in 3. Setup a Postgr
 
 Replace pass with the password that you created in 3. Setup a PostgreSQL database above.
 
-If you’re using a remote host with password authentication rather than SSL authentication, use:
+If you are using a remote host with password authentication rather than SSL authentication, use:
 ```
 	sqlalchemy.url = postgresql://ckan_default:pass@<remotehost>/ckan_default?sslmode=disable
 ```
@@ -299,11 +299,10 @@ site_id - Each CKAN site should have a unique site_id, for example:
 	ckan.site_id = default
 ```
 
-site_url - Provide the site’s URL (used when putting links to the site into the FileStore, notification emails etc). For
+site_url - Provide the site's URL (used when putting links to the site into the FileStore, notification emails etc). For
 example:
 ```
 ckan.site_url = http://demo.ckan.org
 ```
 
 Do not add a trailing slash to the URL.
-

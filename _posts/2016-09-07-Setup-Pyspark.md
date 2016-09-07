@@ -69,22 +69,14 @@ See the link http://stackoverflow.com/questions/29099115/spark-submit-add-multip
 
 Test reading avro.
 Prepare t.avro.
-<<<<<<< HEAD
-In pyspark, do the following. See the link https://www.cloudera.com/documentation/enterprise/5-6-x/topics/spark_avro.html#concept_hsz_nvn_45__section_pgn_r45_st.
-=======
-In pyspark, do the following. See thelink https://www.cloudera.com/documentation/enterprise/5-6-x/topics/spark_avro.html#concept_hsz_nvn_45__section_pgn_r45_st.
 
->>>>>>> 92fd6c51bc828b6f350de5e430f794cee490d430
+In pyspark, do the following. See the link https://www.cloudera.com/documentation/enterprise/5-6-x/topics/spark_avro.html#concept_hsz_nvn_45__section_pgn_r45_st.
+
 ```
 df = sqlContext.sqlContext.read.format("com.databricks.spark.avro").load("/user/mapr/avro-test/t.avro")
 a = df.collect()
 a[1]
 ```
-<<<<<<< HEAD
 
 ### Another reference:
 https://github.com/databricks/spark-avro
-
-=======
-  
->>>>>>> 92fd6c51bc828b6f350de5e430f794cee490d430

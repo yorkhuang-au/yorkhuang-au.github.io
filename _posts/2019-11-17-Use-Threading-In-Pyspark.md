@@ -15,7 +15,11 @@ main.py
 from pyspark.sql import SparkSession
 
 def main():
-    spark = SparkSession.builder.appName('Test_threading').getOrCreate()
+    spark = SparkSession \
+        .builder \
+        .appName('Test_threading') \
+        .getOrCreate()
+        
     # Create a dataframe
     df = spark.createDataFrame(
         [(1,'a',2.0), 
@@ -46,12 +50,15 @@ respectively.
 import threading
 
 def thread_worker(df, id):
-    df.write.mode('overwrite').save('./output_{0}'.format(id))
+    df.write.mode('overwrite') \
+    .save('./output_{0}'.format(id))
     
 def main():
     ...
     
-    threads = [threading.Thread(target=thread_worker, args=(df, id) for id in range(2)]
+    threads = [threading.Thread(target=thread_worker, args=(df, id) \
+        for id in range(2)]
+        
     for t in threads:
         t.start()
     
@@ -78,12 +85,14 @@ def thread_worker(spark, df, id):
     )
     
     df_out = df.join(df_extra, ['c1'])
-    df_out.write.mode('overwrite').save('./output_{0}'.format(id))
+    df_out.write.mode('overwrite') \
+        .save('./output_{0}'.format(id))
     
 def main():
     ...
     
-    threads = [threading.Thread(target=thread_worker, args=(spark , df, id) for id in range(2)]
+    threads = [threading.Thread(target=thread_worker, \
+        args=(spark , df, id) for id in range(2)]
     
 ```
 

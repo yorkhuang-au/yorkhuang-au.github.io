@@ -1,10 +1,13 @@
-## Windows Login History Event Log
+---
+layout: post
+title: Windows Login History Event Log
+---
 
 I need to find out the login history of Windows 10.
 
-https://www.lepide.com/how-to/audit-who-logged-into-a-computer-and-when.html
+[Reference] https://www.lepide.com/how-to/audit-who-logged-into-a-computer-and-when.html
 
-1. Enable event log for login
+### Enable event log for login
 
 Below are the steps to enable auditing of user Logon/Logoff events
 
@@ -30,7 +33,7 @@ Step 12 – Close “Group Policy Management Console”.
 Step 13 – Now, run following command to update GPO.
 Step 14 – gpupdate /force
 
-2. Find login log in event viewer
+### Find login log in event viewer
 
 After you have configured log on auditing, whenever users logon into network systems, the event logs will be generated and stored. To find out the details, you have to use Windows Event Viewer. Follow the below steps to view logon audit events:
 

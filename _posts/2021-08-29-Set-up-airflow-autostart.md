@@ -14,7 +14,7 @@ chown -R airflow:airflow /run/airflow
 
 2. vim /lib/systemd/system/airflow-webserver.service
 
-```{config}
+```
 [Unit]
 Description=Airflow webserver daemon
 After=syslog.target network.target

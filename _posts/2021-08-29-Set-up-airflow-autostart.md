@@ -5,14 +5,14 @@ In this post, I will show how to set it up using systemctrl.
 
 As a root user:
 
-1. create pid folder
+# create pid folder
 
 ```{sh}
 mkdir /run/airflow
 chown -R airflow:airflow /run/airflow
 ```
 
-2. vim /lib/systemd/system/airflow-webserver.service
+# vim /lib/systemd/system/airflow-webserver.service
 
 ```
 [Unit]
@@ -35,7 +35,7 @@ PrivateTmp=true
 WantedBy=multi-user.target
 ```
 
-3.  vim /lib/systemd/system/airflow-scheduler.service
+#  vim /lib/systemd/system/airflow-scheduler.service
 
 ```{config}
 [Unit]
@@ -58,14 +58,14 @@ PrivateTmp=true
 WantedBy=multi-user.target
 ```
 
-4. Enable services
+# Enable services
  
  ```{config}
  systemctl enable airflow-webserver.service
  systemctl enable airflow-scheduler.service
 ```
 
-5. Start services
+# Start services
  
  ```{config}
  systemctl start airflow-webserver

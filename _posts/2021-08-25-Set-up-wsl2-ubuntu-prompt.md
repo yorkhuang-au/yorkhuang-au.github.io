@@ -1,4 +1,9 @@
- ## Set up WSL2 Ubuntu Prompt
+---
+layout: post
+title: Set up WSL2 Ubuntu Prompt
+---
+
+### Set up WSL2 Ubuntu Prompt
  
  In a git-bash, run
  

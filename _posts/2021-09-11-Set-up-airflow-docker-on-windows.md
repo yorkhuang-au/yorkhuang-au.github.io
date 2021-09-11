@@ -8,6 +8,7 @@ mkdir airflow
 ```
 
 2. create docker-compose.yaml in airflow-demo folder
+
 ```
 version: '3.8'
 services:
@@ -63,6 +64,7 @@ volumes:
   postgres_database:
       external: true    
 ```
+
 3. create airflow.cfg in airflow-demo/airflow folder
 ```
 [core]

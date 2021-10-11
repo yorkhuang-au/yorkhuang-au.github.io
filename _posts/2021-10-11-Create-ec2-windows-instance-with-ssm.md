@@ -1,4 +1,7 @@
-## Create ec2 Windows Instance and Connect via SSM
+---
+layout: post
+title: Create ec2 Windows Instance and Connect via SSM
+---
 
 ### Terraform code
 

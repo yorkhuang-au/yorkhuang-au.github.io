@@ -5,6 +5,8 @@
 mkdir airflow-demo
 cd airflow-demo
 mkdir airflow
+# create postgres_database volume
+docker volume create --name=postgres_database
 ```
 
 2. create docker-compose.yaml in airflow-demo folder
